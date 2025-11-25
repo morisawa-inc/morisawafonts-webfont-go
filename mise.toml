@@ -1,0 +1,14 @@
+[tools]
+"aqua:golangci/golangci-lint" = "2.6.2"
+
+[tasks.lint]
+description = "Run linters"
+run = "golangci-lint run"
+
+[tasks.test]
+description = "Run tests"
+run = "go tool gotest.tools/gotestsum ./..."
+
+[tasks.ci]
+description = "Run CI tasks"
+depends = ["lint", "test"]

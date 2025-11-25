@@ -1,0 +1,21 @@
+version: "2"
+linters:
+  enable:
+    - gosec
+    - gocritic
+    - modernize
+  settings:
+    staticcheck:
+      checks:
+        - all
+    gocritic:
+      enabled-tags:
+        - performance
+        - opinionated
+formatters:
+  enable:
+    - gofmt
+    - gofumpt
+  settings:
+    gofumpt:
+      extra-rules: true

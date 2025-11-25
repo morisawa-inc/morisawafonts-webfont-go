@@ -1,0 +1,5 @@
+{
+  "labels": ["renovate"],
+  "postUpdateOptions": ["gomodTidy"],
+  "extends": ["config:recommended"]
+}
