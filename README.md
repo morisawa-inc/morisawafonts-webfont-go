@@ -1,5 +1,7 @@
 # Morisawa Fonts web font API for Go
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/morisawa-inc/morisawafonts-webfont-go)
+
 [Morisawa Fonts](https://morisawafonts.com/) の Web フォント API を Go 言語で利用するためのライブラリです。
 
 - [API ドキュメント](https://developers.morisawafonts.com/docs/api/webfont/)
