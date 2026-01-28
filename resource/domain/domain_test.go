@@ -62,6 +62,7 @@ func TestDomains_List(t *testing.T) {
 	domains := NewDomains(c)
 
 	list := domains.List(nil)
+
 	i := 0
 	for item, err := range list.Iter(t.Context()) {
 		i++
@@ -100,6 +101,7 @@ func TestDomains_Add(t *testing.T) {
 	domains := NewDomains(c)
 
 	result, err := domains.Add(t.Context(), []string{"example.com", "example.net"})
+
 	assert.Equal(t, &AddResult{
 		Domains: []string{"example.com", "example.net"},
 	}, result)
@@ -123,5 +125,6 @@ func TestDomains_Delete(t *testing.T) {
 	domains := NewDomains(c)
 
 	err := domains.Delete(t.Context(), []string{"example.com", "example.net"})
+
 	assert.NoError(t, err)
 }

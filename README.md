@@ -55,5 +55,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	// ページビューを取得する例
+	pv, err := client.Stats.PV.Get(ctx, nil)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(pv.PV.Total)
 }
 ```

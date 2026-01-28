@@ -19,17 +19,17 @@ type Input struct {
 }
 
 // Values converts the Input struct to url.Values for use in HTTP requests.
-func (p *Input) Values() url.Values {
-	if p == nil {
+func (i *Input) Values() url.Values {
+	if i == nil {
 		return nil
 	}
 
 	values := url.Values{}
-	if p.Limit != nil {
-		values.Set(Limit, fmt.Sprintf("%d", *p.Limit))
+	if i.Limit != nil {
+		values.Set(Limit, fmt.Sprintf("%d", *i.Limit))
 	}
-	if p.Cursor != nil {
-		values.Set(Cursor, *p.Cursor)
+	if i.Cursor != nil {
+		values.Set(Cursor, *i.Cursor)
 	}
 	return values
 }
