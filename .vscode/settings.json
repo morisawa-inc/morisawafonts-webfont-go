@@ -1,8 +1,7 @@
 {
-  "go.lintTool": "golangci-lint",
+  "go.lintTool": "golangci-lint-v2",
   "go.lintFlags": ["--path-mode=abs", "--fast-only"],
   "[go]": {
-    "editor.snippetSuggestions": "none",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
