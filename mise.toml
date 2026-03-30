@@ -1,5 +1,5 @@
 [tools]
-"aqua:golangci/golangci-lint" = "2.11.3"
+"aqua:golangci/golangci-lint" = "2.11.4"
 
 [tasks.lint]
 description = "Run linters"
