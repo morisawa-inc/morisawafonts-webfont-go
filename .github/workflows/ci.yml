@@ -19,7 +19,7 @@ jobs:
           go-version-file: go.mod
 
       - name: Setup mise
-        uses: jdx/mise-action@v3
+        uses: jdx/mise-action@v4
 
       - name: Run CI
         run: mise tasks run ci
