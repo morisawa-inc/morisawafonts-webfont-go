@@ -3,7 +3,7 @@ module github.com/morisawa-inc/morisawafonts-webfont-go
 go 1.24.0
 
 require (
-	github.com/jarcoal/httpmock v1.4.1
+	github.com/jarcoal/httpmock v1.4.2
 	github.com/samber/lo v1.52.0
 	github.com/stretchr/testify v1.11.1
 	resty.dev/v3 v3.0.0-beta.6
