@@ -101,7 +101,7 @@ func (c *Client) request(
 	if err != nil {
 		return err
 	}
-	if response.IsError() {
+	if response.IsStatusFailure() {
 		return NewAPIError(response)
 	}
 	return nil
@@ -116,7 +116,11 @@ func setupResty(o *option.ClientOptions) *resty.Client {
 	}
 
 	r.SetHeader("user-agent", getUserAgent()).
-		SetAllowMethodDeletePayload(true).
+		SetMethodDeleteAllowPayload(true).
+		AddRetryConditions(
+			resty.RetryConditionStatusTooManyRequests,
+			resty.RetryConditionStatus5XX,
+		).
 		SetLogger(&logger{})
 
 	return r
